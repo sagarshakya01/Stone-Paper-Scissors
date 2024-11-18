@@ -18,16 +18,16 @@ const drawGame = () => {
     msg.innerText = "It's a Draw. Play again";
     msg.style.backgroundColor = "#081b31";
 }
-const showWinner = (userWin) => {
+const showWinner = (userWin,userChoice,computerChoice) => {
     if(userWin){
        userscore ++;
        userScorePara.innerText = userscore;
-        msg.innerText = "You Win!";
+        msg.innerText = `You Win Your ${userChoice} beats ${computerChoice}`;
         msg.style.backgroundColor = "green";
     }else {
         computerscore ++;
         computerScorePara.innerText = computerscore;
-        msg.innerText = "You Lose.";
+        msg.innerText = `You Lose. ${userChoice} beats your ${computerChoice}`;
         msg.style.backgroundColor = "red";
     }
 }
@@ -50,7 +50,7 @@ const playGame = (userChoice) => {
         }else {
             userWin = computerChoice === "rock"? false : true;
         }
-        showWinner(userWin);
+        showWinner(userWin,userChoice,computerChoice);
     }
 };
 
