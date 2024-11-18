@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* body{
+    background-color: lightslategray;
+    background-image: url("./img/game.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+
+h1 {
+  background-color: #081b31;
+  color: #fff;
+  height: 5rem;
+  line-height: 5rem;
+}
+
+.choice:hover {
+  background-color: #081b31;
+  cursor: pointer;
+}
+
+.choice {
+  height: 165px;
+  width: 165px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 5rem;
+}
+
+.score-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-top: 3rem;
+  gap: 5rem;
+}
+
+#user-score,
+#computer-score {
+  font-size: 4rem;
+}
+
+.msg-container {
+  margin-top: 5rem;
+}
+
+#msg {
+  background-color: #081b31;
+  color: #fff;
+  font-size: 2rem;
+  display: inline;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+@media (max-width: 400px) {
+  h1 {
+    width: 135%;
+  }
+  .choice {
+    height: 165px;
+    width: 90px;
+  }
+
+  img {
+    height: 110px;
+    width: 110px;
+  }
+  .choices {
+    gap: 3rem;
+    margin-top: 5rem;
+    margin-left: 4rem;
+  }
+  .choice:hover {
+    opacity: 0.5;
+    background-color: white;
+  }
+
+  .score-board {
+    margin-left: 4rem;
+  }
+
+  #msg {
+    margin-left: 4rem;
+    display: block;
+  }
+}
+
+@media (min-width:401px) and (max-width:600px){
+    
+    
+      img {
+        height: 110px;
+        width: 110px;
+      }
+      .choices {
+     gap: .5rem;
+        margin-top: 5rem;
+       
+      }
+      .choice:hover {
+        opacity: 0.5;
+        background-color: white;
+      }
+    
+      .score-board {
+        margin-left: 1.5rem;
+      }
+    
+}
+
+@media (min-width:1000px) and (max-width:1200px) {
+    .msg-container {
+        margin-top: 3rem;
+      }
+}
